@@ -1,0 +1,21 @@
+<html>
+  <body>
+    <!-- Load TensorFlow.js -->
+    <script src="https://unpkg.com/@tensorflow/tfjs"></script>
+    <!-- Load Posenet -->
+    <script src="https://unpkg.com/@tensorflow-models/posenet">
+    </script>
+    <script type="text/javascript">
+      posenet.load().then(function(net) {
+        console.log("loaded");
+        var x=document.getElementById("first")
+
+        const pose =  net.estimateSinglePose(x, 0.5, false, 16);
+        console.log(pose)
+
+      });
+    </script>
+
+    <img src="./Screenshot from 2019-08-11 12-50-01.png" alt="bat" id ="first">
+  </body>
+</html>
