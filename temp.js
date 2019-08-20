@@ -44,44 +44,44 @@ async function singlePoseOutput(imageElement) {
   return pose;
 };
 
-arr=['cover','cut','leg',"pull","scoop","straight"]
-list={}
-for (i=0;i<6;i++)
-{
-  testFolder="./data/training/"+arr[i];
-  final=[];
-  fs.readdir(testFolder, (err, files) => {
-    files.forEach(file => {
-      f=testFolder+"/"+file
-      abc(f).then((data)=>
-      {
-      }).catch((err)=>
-      {
-        console.log(err)
-      })
+// arr=['cover','cut','leg',"pull","scoop","straight"]
+// list={}
+// for (i=0;i<6;i++)
+// {
+//   testFolder="./data/training/"+arr[i];
+//   final=[];
+//   fs.readdir(testFolder, (err, files) => {
+//     files.forEach(file => {
+//       f=testFolder+"/"+file
+//       abc(f).then((data)=>
+//       {
+//       }).catch((err)=>
+//       {
+//         console.log(err)
+//       })
 
-    });
-  });
-}
+//     });
+//   });
+// }
 
-async function abc(file)
-{
-  const img = new Image();
-  img.src = file;  
-  const canvas = createCanvas(200, 300);
+// async function abc(file)
+// {
+//   const img = new Image();
+//   img.src = file;  
+//   const canvas = createCanvas(200, 300);
   
-  const ctx = canvas.getContext('2d');
+//   const ctx = canvas.getContext('2d');
 
-  ctx.drawImage(img, 0, 0,img.width,img.height)
+//   ctx.drawImage(img, 0, 0,img.width,img.height)
   
-    const input =tf.browser.fromPixels(canvas);
+//     const input =tf.browser.fromPixels(canvas);
   
-    singlePoseOutput(input).then((data)=>
-    {
-      console.log(data);
+//     singlePoseOutput(input).then((data)=>
+//     {
+//       console.log(data);
 
-    })
- }
+//     })
+//  }
 
 
 
