@@ -13,7 +13,11 @@ const { createCanvas, Image } = require('canvas');
 
 
 const img = new Image();
+
 img.src = '/home/puneet/Work/minor1/data/training/scoop/100_scoop_main.jpg';
+img.onload=()=>{
+  console.log("Helllllllllllllllllo")
+}
 
 console.log(img)
 

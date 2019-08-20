@@ -67,12 +67,14 @@ for (i=0;i<6;i++)
 async function abc(file)
 {
   const img = new Image();
-  img.src = file;  
+    
   const canvas = createCanvas(200, 300);
   
   const ctx = canvas.getContext('2d');
-
-  ctx.drawImage(img, 0, 0,img.width,img.height)
+  console.log("YYY")
+  img.onload=()=>{
+    console.log(img)
+    ctx.drawImage(img, 0, 0,img.width,img.height)
   
     const input =tf.browser.fromPixels(canvas);
   
@@ -81,6 +83,9 @@ async function abc(file)
       console.log(data);
 
     })
+  }
+  img.src = file;
+
  }
 
 
