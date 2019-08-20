@@ -80,6 +80,8 @@ async function abc(file)
     {
       console.log(data);
 
+    }).catch((msg)=>{
+      console.log(msg)
     })
   }
   img.src = file;
