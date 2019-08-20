@@ -71,9 +71,7 @@ async function abc(file)
   const canvas = createCanvas(200, 300);
   
   const ctx = canvas.getContext('2d');
-  console.log("YYY")
   img.onload=()=>{
-    console.log(img)
     ctx.drawImage(img, 0, 0,img.width,img.height)
   
     const input =tf.browser.fromPixels(canvas);
