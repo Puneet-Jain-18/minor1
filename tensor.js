@@ -9,15 +9,19 @@ const straightFolder = './data/training/straight';
 const legFolder = './data/training/leg';
 const fs = require('fs');
 const { createCanvas, Image } = require('canvas');
-const canvas = createCanvas(200, 200);
 
-const ctx = canvas.getContext('2d');
 
 
 const img = new Image();
 img.src = '/home/puneet/Work/minor1/data/training/scoop/100_scoop_main.jpg';
+
+console.log(img)
+
+const canvas = createCanvas(200, 300);
+
+const ctx = canvas.getContext('2d');
   setTimeout(async function(){
-    ctx.drawImage(img, 0, 0);
+    ctx.drawImage(img, 0, 0,img.width,img.height);
 
   const input =tf.browser.fromPixels(canvas);
 
@@ -26,7 +30,7 @@ img.src = '/home/puneet/Work/minor1/data/training/scoop/100_scoop_main.jpg';
     console.log(data);
   })
   },
-5000);
+1000);
 
 
 async function singlePoseOutput(imageElement) {
@@ -40,45 +44,52 @@ async function singlePoseOutput(imageElement) {
   return pose;
 };
 
-// arr=['cover','cut','leg',"pull","scoop","straight"]
-// list={}
-// for (i=0;i<6;i++)
-// {
-//   testFolder="./data/training/"+arr[i];
-//   final=[];
-//   fs.readdir(testFolder, (err, files) => {
-//     files.forEach(file => {
-//       f=testFolder+"/"+file
-//       abc(f).then((data)=>
-//       {
-//         //console.log(data)
-//         //console.log("Returned from function")
-//       }).catch((err)=>
-//       {
-//         console.log(err)
-//       })
+arr=['cover','cut','leg',"pull","scoop","straight"]
+list={}
+for (i=0;i<6;i++)
+{
+  testFolder="./data/training/"+arr[i];
+  final=[];
+  fs.readdir(testFolder, (err, files) => {
+    files.forEach(file => {
+      f=testFolder+"/"+file
+      abc(f).then((data)=>
+      {
+        //console.log(data)
+        //console.log("Returned from function")
+      }).catch((err)=>
+      {
+        console.log(err)
+      })
 
-//     });
-//   });
-// }
+    });
+  });
+}
 
-// async function abc(file)
-// {
+async function abc(file)
+{
 
-// const img = new Image();
-// img.src = file;
-//   setTimeout(async function(){
-//     ctx.drawImage(img, 0, 0).then(()=>{
-//       const input =tf.browser.fromPixels(canvas);
+  // const img = new Image();
+  // img.src = file;
+  
+  // console.log(img)
+  
+  // const canvas = createCanvas(200, 300);
+  
+  // const ctx = canvas.getContext('2d');
+  //   setTimeout(async function(){
+  //     ctx.drawImage(img, 0, 0,img.width,img.height)
+  
+  //   const input =tf.browser.fromPixels(canvas);
+  
+  //   singlePoseOutput(input).then((data)=>
+  //   {
+  //     console.log(data);
+  //   })
+  //   },
+  // 1000);
+ }
 
-//   singlePoseOutput(input).then((data)=>
-//   {
-//     console.log(data);
-//   })
-//     })
-//   },
-// 5000);
-//   }
 
 
 
