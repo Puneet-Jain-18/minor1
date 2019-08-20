@@ -1,0 +1,1 @@
+./data/training/straight/9_straight_translation.jpg
