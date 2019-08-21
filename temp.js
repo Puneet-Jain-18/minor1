@@ -91,8 +91,9 @@ async function singlePoseOutput(imageElement) {
 //     })
 //  }
 
-// score,nose.x,nose.y,nose.score,leftEye.x,leftEye.y,leftEye.score,nose.x,nose.y,nose.score
+// score,nose.x,nose.y,nose.score,leftEye.x,leftEye.y,leftEye.score,rightEye.x,rightEye.y,rightEye.score,leftEar.x,leftEar.y,leftEar.score,rightEar.x,rightEar.y,rightEar.score,leftShoulder.x,leftShoulder.y,leftShoulder.score,rightShoulder.x,rightShoulder.y,rightShoulder.score,leftElbow.x,leftElbow.y,leftElbow.score,rightElbow.x,rightElbow.y,rightElbow.score,leftWrist.x,leftWrist.y,leftWrist.score,rightWrist.x,rightWrist.y,rightWrist.score,leftHip.x,leftHip.y,leftHip.score,rightHip.x,rightHip.y,rightHip.score,leftAnkle.x,leftAnkle.y,leftAnkle.score,rightAnkle.x,rightAnkle.y,rightAnkle.score,shotType
 
+//                                                                                                                                                                                                      eye ear shoulder                                                                                                                                                                                                                              elbow wrist hip knee ankle
 
 
 
