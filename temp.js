@@ -14,7 +14,10 @@ const { createCanvas, Image } = require('canvas');
 
 const img = new Image();
 
+const img2 = new Image();
 img.src = '/home/puneet/Work/minor1/data/training/scoop/100_scoop_main.jpg';
+
+img2.src = '/home/puneet/Work/minor1/data/training/scoop/98_scoop_main.jpg';
 img.onload=()=>{
   console.log("Helllllllllllllllllo")
 }
@@ -32,6 +35,7 @@ const ctx = canvas.getContext('2d');
   singlePoseOutput(input).then((data)=>
   {
     console.log(data);
+    str=data.score
   })
   },
 1000);
