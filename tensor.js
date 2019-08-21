@@ -26,7 +26,7 @@ arr=['cover','cut','leg',"pull","scoop","straight"]
 list={}
 //for (i=0;i<6;i++)
 //{
-  testFolder="./data/training/"+arr[1];
+  testFolder="./data/training/"+arr[2];
   final=[];
   fs.readdir(testFolder, (err, files) => {
     files.forEach(file => {
@@ -74,7 +74,7 @@ async function abc(file)
               data.keypoints[13].position.x+","+data.keypoints[13].position.y+","+data.keypoints[13].score+","+
               data.keypoints[14].position.x+","+data.keypoints[14].position.y+","+data.keypoints[14].score+","+
               data.keypoints[15].position.x+","+data.keypoints[15].position.y+","+data.keypoints[15].score+","+
-              data.keypoints[16].position.x+","+data.keypoints[16].position.y+","+data.keypoints[16].score+","+"cut\n";
+              data.keypoints[16].position.x+","+data.keypoints[16].position.y+","+data.keypoints[16].score+","+"leg\n";
               console.log(str);
       fs.appendFile("cover.txt",str, function (err) {
         if (err) throw err;
