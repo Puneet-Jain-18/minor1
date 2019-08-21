@@ -91,6 +91,8 @@ async function singlePoseOutput(imageElement) {
 //     })
 //  }
 
+// score,nose.x,nose.y,nose.score,leftEye.x,leftEye.y,leftEye.score,nose.x,nose.y,nose.score
+
 
 
 
